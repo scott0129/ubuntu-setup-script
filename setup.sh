@@ -1,4 +1,5 @@
 #!/bin/sh
+set -euf -o pipefail
 
 # 1. Download dotfiles
 git clone https://github.com/scott0129/dotfiles.git ~/dotfiles
