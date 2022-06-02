@@ -3,8 +3,8 @@
 # 1. Download dotfiles
 git clone https://github.com/scott0129/dotfiles.git ~/dotfiles
 
-find ~/dotfiles/ -maxdepth 1 -type f -exec cp {} ~/ \;	# Copy all files from git repo into home dir
-
+# Create symlinks for each dotfile
+find ~/dotfiles -maxdepth 1 -mindepth 1 -not -path "*.git" -exec basename '{}' \; | xargs -I {} ln -s ~/dotfiles/{} ~/{}
 
 # 2. Install Neovim and plugins
 sudo add-apt-repository ppa:neovim-ppa/stable
