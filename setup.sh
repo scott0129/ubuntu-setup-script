@@ -26,8 +26,9 @@ chsh -s $(which zsh)
 # 4. Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# 5. Install Pure prompt
-mkdir -p "$HOME/.zsh"
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+# 5.1 Install Nerd font (TBD)
+
+# 5.2 Install Starship prompt
+curl -sS https://starship.rs/install.sh | sh
 
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
