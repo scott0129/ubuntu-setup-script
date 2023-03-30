@@ -28,6 +28,9 @@ chsh -s $(which zsh)
 # 5. Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# 5.1 Install Oh-My-Zsh autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # 6.1 Install Nerd font (TBD)
 
 # 6.2 Install Starship prompt
