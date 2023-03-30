@@ -36,4 +36,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # 6.2 Install Starship prompt
 curl -sS https://starship.rs/install.sh | sh
 
+# 7. Point IntellJ vimrc to .vimrc
+ln -s ~/.vimrc ~/.ideavimrc
+
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
