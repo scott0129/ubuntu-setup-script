@@ -2,7 +2,7 @@
 set -euf -o pipefail
 
 # 1. Download dotfiles
-git clone https://github.com/scott0129/dotfiles.git ~/dotfiles
+git clone git@github.com:scott0129/dotfiles.git ~/dotfiles
 
 # Create symlinks for each dotfile
 find ~/dotfiles -maxdepth 1 -mindepth 1 -not -path "*.git" -exec basename '{}' \; | xargs -I {} ln -s ~/dotfiles/{} ~/{}
