@@ -8,14 +8,15 @@ git clone git@github.com:scott0129/dotfiles.git ~/dotfiles
 find ~/dotfiles -maxdepth 1 -mindepth 1 -not -path "*.git" -exec basename '{}' \; | xargs -I {} ln -s ~/dotfiles/{} ~/{}
 
 # a.
-TODO: If mac
+# TODO: If mac
 # Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# 2. Install Neovim and plugins
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim		# This might also install python.
+# 2. Install Neovim and plugins from pre-built archives
+# TODO: if Linux
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 
 # 3. Install Tmux Plugin Manager
 # This is kinda buggy for some reason. sometimes you have to run it twice, maybe after you run tmux for the first time.
