@@ -22,8 +22,12 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 # This is kinda buggy for some reason. sometimes you have to run it twice, maybe after you run tmux for the first time.
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# Make nvim refer to same .vimrc
+# (SKIP IF LAZYVIM) Make nvim refer to same .vimrc
 mkdir -p ~/.config/nvim && echo -e "set runtimepath^=~/.vim runtimepath+=~/.vim/after \nlet &packpath=&runtimepath \nsource ~/.vimrc" >> ~/.config/nvim/init.vim
+
+# Install Lazyvim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 
 # Install ctags	plugin
 sudo apt-get install exuberant-ctags
@@ -45,5 +49,8 @@ curl -sS https://starship.rs/install.sh | sh
 
 # 7. Point IntellJ vimrc to .vimrc
 ln -s ~/.vimrc ~/.ideavimrc
+
+# 8. Install Deno
+curl -fsSL https://deno.land/install.sh | sh
 
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
