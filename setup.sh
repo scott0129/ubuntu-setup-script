@@ -32,6 +32,10 @@ rm -rf ~/.config/nvim/.git
 # Install ctags	plugin
 sudo apt-get install exuberant-ctags
 
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 # 4. Install zsh
 sudo apt-get install zsh
 chsh -s $(which zsh)
